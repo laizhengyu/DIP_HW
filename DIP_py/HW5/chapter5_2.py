@@ -44,16 +44,21 @@ deltasize=1
 gray_th=40
 value=[]
 s=[]
-for size in range(3,maxsize,1):
+for size in range(5,maxsize,1):
     
     if size <20:
         deltasize=1
-        gray_th=20
-    else:
-        deltasize=2
         gray_th=40
+    else:
+        deltasize=1
+        gray_th=20
         
-        
+#    if size <20:
+#        deltasize=1
+#        gray_th=20
+#    else:
+#        deltasize=2
+#        gray_th=20  
         
         
 #MORPH_ELLIPSE , MORPH_RECT
@@ -109,6 +114,7 @@ for size in range(3,maxsize,1):
     
     
     diffValue=count/((size)*(size))
+#    diffValue=count/(3.14*(size*size)/4)
 #    
     #_,thres_img = cv2.threshold(diffimg,20,255,cv2.THRESH_BINARY)
     
